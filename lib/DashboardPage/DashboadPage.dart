@@ -1,5 +1,10 @@
+import 'package:cat/DashboardPage/Pages/DetailFilmsPage.dart';
+import 'package:cat/DashboardPage/Pages/FilmsPage.dart';
+import 'package:cat/DashboardPage/Pages/SpesiesPage.dart';
+import 'package:cat/DashboardPage/Pages/VehaclePage.dart';
 import 'package:flutter/material.dart';
-import 'ImagesPage/ImagesPage.dart';
+
+import 'Pages/LocationsPage.dart';
 
 class DashboardPage extends StatefulWidget {
   @override
@@ -12,33 +17,77 @@ class _DashboardPageState extends State<DashboardPage> {
     return Scaffold(
       body: GridView(
         children: [
-          GestureDetector(
-            onTap: () {
-              Navigator.of(context).push(
-                MaterialPageRoute(
-                  builder: (context) => ImagesPage(),
-                ),
-              );
-            },
-            child: Card(
-              child: Center(child: Text("Images")),
+          Card(
+            child: ListTile(
+              onTap: () {
+                Navigator.of(context).push(
+                  MaterialPageRoute(
+                    builder: (context) => FilmsPage(),
+                  ),
+                );
+              },
+              title: Center(
+                child: Text("Films"),
+              ),
             ),
           ),
           Card(
-            child: Center(
-              child: Text("Favorite"),
+            child: ListTile(
+              onTap: () {
+                Navigator.of(context).push(
+                  MaterialPageRoute(
+                    builder: (context) => PeoplePage(),
+                  ),
+                );
+              },
+              title: Center(
+                child: Text("People"),
+              ),
             ),
           ),
           Card(
-            child: Center(
-              child: Text("Breeds"),
+            child: ListTile(
+              onTap: () {
+                Navigator.of(context).push(
+                  MaterialPageRoute(
+                    builder: (context) => SpesiesPage(),
+                  ),
+                );
+              },
+              title: Center(
+                child: Text("Spesies"),
+              ),
             ),
           ),
           Card(
-            child: Center(
-              child: Text("Vote"),
+            child: ListTile(
+              onTap: () {
+                Navigator.of(context).push(
+                  MaterialPageRoute(
+                    builder: (context) => LocationsPage(),
+                  ),
+                );
+              },
+              title: Center(
+                child: Text("Location"),
+              ),
             ),
           ),
+          Card(
+            child: ListTile(
+              onTap: () {
+                Navigator.of(context).push(
+                  MaterialPageRoute(
+                    builder: (context) => VehaclePage(),
+                  ),
+                );
+              },
+              title: Center(
+                child: Text("Vehacle"),
+              ),
+            ),
+          ),
+
         ],
         gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
             crossAxisCount: 2,

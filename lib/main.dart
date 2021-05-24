@@ -1,7 +1,7 @@
+import 'package:cat/Provider/FilmsPageProviders.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'DashboardPage/DashboadPage.dart';
-import 'Provider/ImagesProvider.dart';
 
 void main() {
   runApp(MyApp());
@@ -21,7 +21,7 @@ class MyApp extends StatelessWidget {
     return MultiProvider(
       providers: [
         ChangeNotifierProvider(
-          create: (_) => ImagesProvider(),
+          create: (_) => Profider(),
         ),
       ],
       child: MaterialApp(
